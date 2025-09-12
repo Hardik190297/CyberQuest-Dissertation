@@ -1,0 +1,240 @@
+/* =====  ABOUT-PAGE ROOT  ===== */
+.about-page {
+    background: #0f172a;
+    color: #e2e8f0;
+    font-family: 'Inter', system-ui, sans-serif;
+    line-height: 1.6;
+}
+
+/* =====  HEADER (same skin as home/login)  ===== */
+.about-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 2px 12px rgba(0, 212, 255, 0.15);
+    z-index: 1000;
+    height: 70px;
+}
+
+.about-header h1 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #22d3ee;
+    margin: 0;
+    text-align: center;
+}
+
+.about-header .home-btn {
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0.6rem 1.3rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 2px solid #06b6d4;
+    background: transparent;
+    color: #06b6d4;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95rem;
+}
+
+.about-header .home-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-50%) scale(0.95);
+    box-shadow: 0 4px 12px rgba(6, 182, 212, 0.25);
+}
+
+/* =====  MAIN CONTENT  ===== */
+.about-main {
+    padding-top: 90px; /* clear fixed header */
+}
+
+/* =====  HERO SECTION  ===== */
+.about-hero {
+    padding: 4rem 0 2rem;
+    text-align: center;
+}
+
+.about-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #f0f9ff;
+    margin-bottom: 1rem;
+}
+
+.about-lead {
+    font-size: 1.15rem;
+    color: #cbd5e1;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* =====  MISSION / TEAM / CONTACT SECTIONS  ===== */
+.about-mission,
+.about-team,
+.about-contact {
+    padding: 3rem 0;
+}
+
+/* =====  RE-USE EXISTING HEADER/SUBTITLE CLASSES  ===== */
+.section-header {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #f0f9ff;
+    text-align: center;
+    margin: 0 0 1rem 0;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: #cbd5e1;
+    text-align: center;
+    margin: 0 auto 2rem;
+    max-width: 600px;
+}
+
+/* =====  CARD GRID (same as home)  ===== */
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.about-card {
+    background: rgba(15, 23, 42, 0.95);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 212, 255, 0.1);
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(0, 212, 255, 0.2);
+    border-color: rgba(56, 189, 248, 0.6);
+}
+
+.about-card .icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    line-height: 1;
+    color: #22d3ee;
+}
+
+.about-card h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #f0f9ff;
+    margin: 0 0 0.5rem 0;
+}
+
+.about-card p {
+    font-size: 0.95rem;
+    color: #cbd5e1;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* =====  ACTION BUTTONS  ===== */
+.about-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+/* =====  FOOTER (same as home)  ===== */
+footer {
+    background: #0f172a;
+    color: #e2e8f0;
+    padding: 3rem 0;
+    margin: 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.footer-links {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.footer-links a {
+    color: #7dd3fc;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+    color: #22d3ee;
+}
+
+footer p {
+    color: #64748b;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* =====  RESPONSIVE  ===== */
+@media (max-width: 768px) {
+    .about-header {
+        padding: 1rem 1.5rem;
+        height: 60px;
+    }
+    .about-header .home-btn {
+        right: 1.5rem;
+    }
+    .about-main {
+        padding-top: 80px;
+    }
+    .about-title {
+        font-size: 2rem;
+    }
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-header {
+        padding: 1rem 1rem;
+        height: 50px;
+    }
+    .about-header .home-btn {
+        right: 1rem;
+    }
+    .about-main {
+        padding-top: 70px;
+    }
+}
