@@ -1,0 +1,547 @@
+/* GamePage.css - Matches Home.css styling */
+
+/* --------------  IMPORT BASE STYLES -------------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', system-ui, sans-serif;
+    background: linear-gradient(-45deg, #0f172a, #1e293b, #334155, #475569);
+    background-size: 400% 400%;
+    animation: gradientFlow 20s ease infinite;
+    line-height: 1.6;
+    color: #e2e8f0;
+}
+
+@keyframes gradientFlow {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* --------------  GAME PAGE LAYOUT -------------- */
+.game-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.game-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-top: 70px; /* Account for fixed header */
+}
+
+.game-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+/* --------------  HEADER (matching Home.css) -------------- */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 2px 12px rgba(0, 212, 255, 0.15);
+    z-index: 1000;
+    height: 70px;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #22d3ee;
+    margin: 0;
+    text-align: center;
+}
+
+header .btn.secondary {
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0.6rem 1.3rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 2px solid #06b6d4;
+    background: transparent;
+    color: #06b6d4;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95rem;
+}
+
+header .btn.secondary:hover {
+    opacity: 0.9;
+    transform: translateY(-50%) scale(0.95);
+    box-shadow: 0 4px 12px rgba(6, 182, 212, 0.25);
+}
+
+/* --------------  SECTION STYLES -------------- */
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* --------------  MENU SECTION -------------- */
+.menu-section {
+    min-height: calc(100vh - 140px); /* Account for header and footer */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 0;
+}
+
+.menu-content {
+    text-align: center;
+    width: 100%;
+}
+
+.game-header {
+    margin-bottom: 4rem;
+}
+
+.game-logo {
+    width: 80px;
+    height: 80px;
+    color: #22d3ee;
+    margin: 0 auto 1.5rem;
+    display: block;
+}
+
+.game-header h2 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #f0f9ff;
+    margin: 0 0 1rem 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.game-header p {
+    font-size: 1.2rem;
+    color: #f0f9ff;
+    margin-bottom: 0.5rem;
+}
+
+.game-instructions {
+    font-size: 1rem;
+    color: #cbd5e1;
+    margin-top: 1rem;
+}
+
+.level-selection {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.level-btn {
+    background: rgba(15, 23, 42, 0.95);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    border-radius: 20px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    box-shadow: 0 8px 24px rgba(0, 212, 255, 0.15);
+    backdrop-filter: blur(8px);
+    min-height: 120px;
+}
+
+.level-btn:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 40px rgba(0, 212, 255, 0.25);
+    border-color: rgba(56, 189, 248, 0.6);
+}
+
+.level-btn.level-1:hover {
+    border-color: rgba(34, 211, 238, 0.8);
+}
+
+.level-btn.level-2:hover {
+    border-color: rgba(248, 113, 113, 0.8);
+}
+
+.level-btn.level-3:hover {
+    border-color: rgba(168, 85, 247, 0.8);
+}
+
+.level-icon {
+    font-size: 3rem;
+    line-height: 1;
+    min-width: 60px;
+}
+
+.level-info h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #f0f9ff;
+    margin: 0 0 0.5rem 0;
+}
+
+.level-info p {
+    font-size: 1rem;
+    color: #cbd5e1;
+    margin: 0;
+}
+
+/* --------------  GAME SECTION -------------- */
+.game-section {
+    min-height: calc(100vh - 140px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.canvas-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.game-canvas {
+    border: 2px solid rgba(56, 189, 248, 0.35);
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 212, 255, 0.2);
+    background: #0f172a;
+}
+
+.game-controls {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* --------------  HINT DISPLAY -------------- */
+.hint-display {
+    position: absolute;
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    max-width: 400px;
+    width: 100%;
+}
+
+.hint-content {
+    background: rgba(15, 23, 42, 0.95);
+    border: 1px solid rgba(34, 211, 238, 0.5);
+    border-radius: 12px;
+    padding: 1rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    box-shadow: 0 4px 12px rgba(0, 212, 255, 0.2);
+    backdrop-filter: blur(8px);
+    animation: hintSlideIn 0.3s ease;
+}
+
+@keyframes hintSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hint-icon {
+    width: 20px;
+    height: 20px;
+    color: #22d3ee;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.hint-content p {
+    color: #f0f9ff;
+    font-size: 0.9rem;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* --------------  MODALS -------------- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    z-index: 1000;
+    backdrop-filter: blur(4px);
+}
+
+.modal-content {
+    background: rgba(15, 23, 42, 0.95);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    border-radius: 20px;
+    padding: 2.5rem;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 16px 40px rgba(0, 212, 255, 0.3);
+    backdrop-filter: blur(12px);
+    animation: modalSlideIn 0.3s ease;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9) translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    justify-content: center;
+}
+
+.modal-icon {
+    width: 32px;
+    height: 32px;
+    color: #fbbf24;
+}
+
+.modal-header h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #f0f9ff;
+    margin: 0;
+}
+
+.question-content {
+    text-align: center;
+}
+
+.question-text {
+    font-size: 1.2rem;
+    color: #f0f9ff;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.options-grid {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.option-btn {
+    background: rgba(251, 191, 36, 0.1);
+    border: 1px solid rgba(251, 191, 36, 0.3);
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    color: #f0f9ff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.option-btn:hover {
+    background: rgba(251, 191, 36, 0.2);
+    border-color: rgba(251, 191, 36, 0.6);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(251, 191, 36, 0.2);
+}
+
+.question-hint {
+    font-size: 0.9rem;
+    color: #cbd5e1;
+    margin: 0;
+}
+
+.feedback-modal {
+    text-align: center;
+    padding: 2rem;
+}
+
+.feedback-text {
+    font-size: 1.3rem;
+    color: #f0f9ff;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* --------------  COMPLETION SECTIONS -------------- */
+.completion-section {
+    min-height: calc(100vh - 140px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 0;
+}
+
+.completion-section.success {
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(15, 23, 42, 0.9));
+}
+
+.completion-section.final {
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.1), rgba(15, 23, 42, 0.9));
+}
+
+.completion-content {
+    text-align: center;
+    max-width: 800px;
+}
+
+.completion-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 2rem;
+    display: block;
+    color: #22d3ee;
+}
+
+.completion-content h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #f0f9ff;
+    margin: 0 0 1.5rem 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.completion-subtitle {
+    font-size: 1.2rem;
+    color: #f0f9ff;
+    margin-bottom: 1rem;
+}
+
+.final-score {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #a855f7;
+    margin-bottom: 2rem;
+}
+
+.completion-stats {
+    margin-bottom: 2rem;
+}
+
+.completion-stats p {
+    font-size: 1.2rem;
+    color: #f0f9ff;
+    margin-bottom: 0.5rem;
+}
+
+.learning-summary {
+    background: rgba(15, 23, 42, 0.7);
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    border-radius: 16px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.learning-summary h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #f0f9ff;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.learning-summary ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.learning-summary li {
+    color: #f0f9ff;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.completion-actions {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+/* --------------  FOOTER (matching Home.css) -------------- */
+footer {
+    background: #0f172a;
+    color: #e2e8f0;
+    padding: 3rem 0;
+    margin: 0;
+    text-align: center;
+    margin-top: auto;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.footer-links {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.footer-links a {
+    color: #7dd3fc;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+    color: #22d3ee;
+}
+
+footer p {
+    color: #64748b;
+    margin: 0;
+    font-size: 0.95rem;
+}

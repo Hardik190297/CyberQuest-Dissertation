@@ -81,7 +81,7 @@ export default function Home() {
             </div>
           </div>
           <div className="hero-action">
-            <Link to="/login" className="btn primary large">Play Cyber Defender Quest</Link>
+            <Link to="/play" className="btn primary large">Play Cyber Defender Quest</Link> {/* Updated to /play */}
             <p className="hero-subtext">Join now to learn!</p>
           </div>
         </div>
@@ -170,7 +170,7 @@ export default function Home() {
             <p>Join others in mastering cybersecurity through Cyber Defender Quest.</p>
           </div>
           <div className="cta-actions">
-            <Link to="/login" className="btn primary large">Start Cyber Defender Quest</Link>
+            <Link to="/play" className="btn primary large">Start Cyber Defender Quest</Link> {/* Updated to /play */}
             <Link to="/about" className="btn secondary">Learn More</Link>
           </div>
         </div>
